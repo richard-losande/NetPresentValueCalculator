@@ -9,17 +9,17 @@ namespace NpvCalculator.Business.Factories
     {
         private readonly ISingleDiscountRateNpvCalculator _singleDiscountRateNpvCalculator;
         private readonly IIncrementingDiscountRateNpvCalculator _incrementingDiscountRateNpvCalculator;
-        private readonly  Dictionary<int,INetPresentValueCalculator> dictionary = new Dictionary<int, INetPresentValueCalculator>()
+        private readonly Dictionary<int, INetPresentValueCalculator> dictionary = new Dictionary<int, INetPresentValueCalculator>()
         {
             { 1,  new IncrementingDiscountRateNpvCalculator()},
             { 2, new SingleDiscountRateNpvCalculator()}
         };
         public NpvCalculatorFactory(IIncrementingDiscountRateNpvCalculator incrementingDiscountRateNpvCalculator, ISingleDiscountRateNpvCalculator singleDiscountRateNpvCalculator)
         {
-            _incrementingDiscountRateNpvCalculator = incrementingDiscountRateNpvCalculator ?? 
+            _incrementingDiscountRateNpvCalculator = incrementingDiscountRateNpvCalculator ??
                                                      throw new ArgumentException(nameof(incrementingDiscountRateNpvCalculator));
-            _singleDiscountRateNpvCalculator = singleDiscountRateNpvCalculator ?? 
-                                               throw  new ArgumentException(nameof(singleDiscountRateNpvCalculator));
+            _singleDiscountRateNpvCalculator = singleDiscountRateNpvCalculator ??
+                                               throw new ArgumentException(nameof(singleDiscountRateNpvCalculator));
         }
         public INetPresentValueCalculator Build(bool isWithIncrementalDiscountRate)
         {

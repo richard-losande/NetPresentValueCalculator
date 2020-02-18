@@ -8,12 +8,20 @@ namespace NpvCalculator.Business.Calculators
 {
     public class IncrementingDiscountRateNpvCalculator : IIncrementingDiscountRateNpvCalculator
     {
-        public double Compute(NetPresentValueCalculationInputDto input)
+        public IEnumerable<double> Compute(NetPresentValueCalculationInputDto input)
         {
-            // to do add lower bound , upper bound logic
-            var result = input.CashFlows
-                .Sum(cashFlow => cashFlow.CashFlowAmount / Math.Pow((input.DiscountRate / 100) + 1, cashFlow.Id));
-            return result - input.InitialInvestment;
+            var result = new List<double>();
+            double netPresentValueAmount = 0;
+            double differenceBetweenIncrementalRateAndUpperBound = 0;
+            for (double discountRate = input.LowerBound; discountRate < input.UpperBound;)
+            {
+                netPresentValueAmount = input.CashFlows
+                    .Sum(cashFlow => cashFlow.CashFlowAmount / Math.Pow((discountRate / 100) + 1, cashFlow.Id));
+                result.Add(netPresentValueAmount - input.InitialInvestment);
+                differenceBetweenIncrementalRateAndUpperBound = input.UpperBound - discountRate;
+                discountRate += Math.Min(differenceBetweenIncrementalRateAndUpperBound, input.IncrementalRate);
+            }
+            return result;
         }
     }
 }

@@ -15,13 +15,17 @@ namespace NpvCalculator.Business.Services
             _npvCalculatorFactory = npvCalculatorFactory;
         }
 
-        public double GetNetPresentValue(NetPresentValueInputDto netPresentValueInputDto)
+        public IEnumerable<double> GetNetPresentValue(NetPresentValueInputDto netPresentValueInputDto)
         {
             var npvCalculator = _npvCalculatorFactory.Build(netPresentValueInputDto.IsWithIncrementalDiscountRate);
             var result = npvCalculator.Compute(new NetPresentValueCalculationInputDto
             {
-                
-
+                InitialInvestment = netPresentValueInputDto.InitialInvestment,
+                DiscountRate = netPresentValueInputDto.DiscountRate,
+                IncrementalRate = netPresentValueInputDto.IncrementalRate,
+                LowerBound = netPresentValueInputDto.LowerBound,
+                UpperBound = netPresentValueInputDto.UpperBound,
+                CashFlows = netPresentValueInputDto.CashFlows
             });
             return result;
         }

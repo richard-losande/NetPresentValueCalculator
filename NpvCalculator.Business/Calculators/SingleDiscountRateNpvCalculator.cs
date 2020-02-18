@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,11 +9,13 @@ namespace NpvCalculator.Business.Calculators
 {
     public class SingleDiscountRateNpvCalculator : ISingleDiscountRateNpvCalculator
     {
-        public double Compute(NetPresentValueCalculationInputDto input)
+        public IEnumerable<double> Compute(NetPresentValueCalculationInputDto input)
         {
-            var result = input.CashFlows
+            var result = new List<double>();
+            var netPresentValueAmount = input.CashFlows
                 .Sum(cashFlow => cashFlow.CashFlowAmount / Math.Pow((input.DiscountRate / 100) + 1, cashFlow.Id));
-            return result - input.InitialInvestment;
+            result.Add(netPresentValueAmount - input.InitialInvestment);
+            return result;
         }
     }
 }
