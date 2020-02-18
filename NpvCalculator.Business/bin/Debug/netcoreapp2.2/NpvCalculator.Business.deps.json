@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v2.2",
+    "signature": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v2.2": {
+      "NpvCalculator.Business/1.0.0": {
+        "dependencies": {
+          "NpvCalculator.Common": "1.0.0"
+        },
+        "runtime": {
+          "NpvCalculator.Business.dll": {}
+        }
+      },
+      "NpvCalculator.Common/1.0.0": {
+        "runtime": {
+          "NpvCalculator.Common.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "NpvCalculator.Business/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "NpvCalculator.Common/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

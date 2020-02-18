@@ -1,0 +1,9 @@
+C:\Users\rlosande\source\repos\NpvCalculator\NpvCalculator.Common\bin\Debug\netcoreapp2.2\NpvCalculator.Common.deps.json
+C:\Users\rlosande\source\repos\NpvCalculator\NpvCalculator.Common\bin\Debug\netcoreapp2.2\NpvCalculator.Common.dll
+C:\Users\rlosande\source\repos\NpvCalculator\NpvCalculator.Common\bin\Debug\netcoreapp2.2\NpvCalculator.Common.pdb
+C:\Users\rlosande\source\repos\NpvCalculator\NpvCalculator.Common\obj\Debug\netcoreapp2.2\NpvCalculator.Common.csprojAssemblyReference.cache
+C:\Users\rlosande\source\repos\NpvCalculator\NpvCalculator.Common\obj\Debug\netcoreapp2.2\NpvCalculator.Common.csproj.CoreCompileInputs.cache
+C:\Users\rlosande\source\repos\NpvCalculator\NpvCalculator.Common\obj\Debug\netcoreapp2.2\NpvCalculator.Common.AssemblyInfoInputs.cache
+C:\Users\rlosande\source\repos\NpvCalculator\NpvCalculator.Common\obj\Debug\netcoreapp2.2\NpvCalculator.Common.AssemblyInfo.cs
+C:\Users\rlosande\source\repos\NpvCalculator\NpvCalculator.Common\obj\Debug\netcoreapp2.2\NpvCalculator.Common.dll
+C:\Users\rlosande\source\repos\NpvCalculator\NpvCalculator.Common\obj\Debug\netcoreapp2.2\NpvCalculator.Common.pdb
