@@ -13,7 +13,7 @@ namespace NpvCalculator.Business.Calculators
             var result = new List<double>();
             double netPresentValueAmount = 0;
             double differenceBetweenIncrementalRateAndUpperBound = 0;
-            for (double discountRate = input.LowerBound; discountRate < input.UpperBound;)
+            for (double discountRate = input.LowerBound; discountRate <= input.UpperBound;)
             {
                 netPresentValueAmount = input.CashFlows
                     .Sum(cashFlow => cashFlow.CashFlowAmount / Math.Pow((discountRate / 100) + 1, cashFlow.Id));

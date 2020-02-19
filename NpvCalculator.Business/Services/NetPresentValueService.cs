@@ -17,7 +17,7 @@ namespace NpvCalculator.Business.Services
 
         public IEnumerable<double> GetNetPresentValue(NetPresentValueInputDto netPresentValueInputDto)
         {
-            var npvCalculator = _npvCalculatorFactory.Build(netPresentValueInputDto.IsWithIncrementalDiscountRate);
+            var npvCalculator = _npvCalculatorFactory.Build(netPresentValueInputDto.DiscountRateType);
             var result = npvCalculator.Compute(new NetPresentValueCalculationInputDto
             {
                 InitialInvestment = netPresentValueInputDto.InitialInvestment,

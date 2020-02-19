@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using NpvCalculator.Business.Enumerations;
+using System.Collections.Generic;
 
 namespace NpvCalculator.Business.DataTransferObjects
 {
@@ -10,7 +11,7 @@ namespace NpvCalculator.Business.DataTransferObjects
         public double LowerBound { get; set; }
         public double IncrementalRate { get; set; }
         public List<CashFlow> CashFlows { get; set; }
-        public bool IsWithIncrementalDiscountRate { get; set; }
+        public DiscountRateType DiscountRateType { get; set; }
     }
 
     public class CashFlow
