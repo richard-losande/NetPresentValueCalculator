@@ -1413,23 +1413,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\rlosande\\.nuget\\packages\\": {},
+    "C:\\Users\\KRazo\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\rlosande\\source\\repos\\NpvCalculator\\NpvCalculator.Common\\NpvCalculator.Common.csproj",
+      "projectUniqueName": "D:\\npv\\NpvCalculator.Common\\NpvCalculator.Common.csproj",
       "projectName": "NpvCalculator.Common",
-      "projectPath": "C:\\Users\\rlosande\\source\\repos\\NpvCalculator\\NpvCalculator.Common\\NpvCalculator.Common.csproj",
-      "packagesPath": "C:\\Users\\rlosande\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\rlosande\\source\\repos\\NpvCalculator\\NpvCalculator.Common\\obj\\",
+      "projectPath": "D:\\npv\\NpvCalculator.Common\\NpvCalculator.Common.csproj",
+      "packagesPath": "C:\\Users\\KRazo\\.nuget\\packages\\",
+      "outputPath": "D:\\npv\\NpvCalculator.Common\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\rlosande\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\KRazo\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

@@ -3,15 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.539
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NpvCalculator", "NpvCalculator\NpvCalculator.csproj", "{589D3778-A9EB-428B-A0AE-49A5C5241379}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NpvCalculator.Business", "NpvCalculator.Business\NpvCalculator.Business.csproj", "{8C1BE377-E29C-4A2B-A787-167B441EE76C}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NpvCalculator.DataAccess", "NpvCalculator.DataAccess\NpvCalculator.DataAccess.csproj", "{DE6D5CE7-5E20-4BF0-AA6B-F10A78AEBB3B}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NpvCalculator.Common", "NpvCalculator.Common\NpvCalculator.Common.csproj", "{84B9831D-C75C-47FA-906F-2E6ED220A005}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NpvCalculator.Web", "NpvCalculator.Web\NpvCalculator.Web.csproj", "{EF78D53E-EC8E-4D01-B68F-0AC2F80D6DA6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NpvCalculator.Web", "NpvCalculator.Web\NpvCalculator.Web.csproj", "{EF78D53E-EC8E-4D01-B68F-0AC2F80D6DA6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,10 +17,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{589D3778-A9EB-428B-A0AE-49A5C5241379}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{589D3778-A9EB-428B-A0AE-49A5C5241379}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{589D3778-A9EB-428B-A0AE-49A5C5241379}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{589D3778-A9EB-428B-A0AE-49A5C5241379}.Release|Any CPU.Build.0 = Release|Any CPU
 		{8C1BE377-E29C-4A2B-A787-167B441EE76C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{8C1BE377-E29C-4A2B-A787-167B441EE76C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8C1BE377-E29C-4A2B-A787-167B441EE76C}.Release|Any CPU.ActiveCfg = Release|Any CPU
