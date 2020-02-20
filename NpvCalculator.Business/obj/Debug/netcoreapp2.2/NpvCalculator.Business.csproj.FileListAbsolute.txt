@@ -10,3 +10,15 @@ C:\Users\rlosande\source\repos\NpvCalculator\NpvCalculator.Business\obj\Debug\ne
 C:\Users\rlosande\source\repos\NpvCalculator\NpvCalculator.Business\obj\Debug\netcoreapp2.2\NpvCalculator.Business.csproj.CopyComplete
 C:\Users\rlosande\source\repos\NpvCalculator\NpvCalculator.Business\obj\Debug\netcoreapp2.2\NpvCalculator.Business.dll
 C:\Users\rlosande\source\repos\NpvCalculator\NpvCalculator.Business\obj\Debug\netcoreapp2.2\NpvCalculator.Business.pdb
+D:\npv\NpvCalculator.Business\bin\Debug\netcoreapp2.2\NpvCalculator.Business.deps.json
+D:\npv\NpvCalculator.Business\bin\Debug\netcoreapp2.2\NpvCalculator.Business.dll
+D:\npv\NpvCalculator.Business\bin\Debug\netcoreapp2.2\NpvCalculator.Business.pdb
+D:\npv\NpvCalculator.Business\bin\Debug\netcoreapp2.2\NpvCalculator.Common.dll
+D:\npv\NpvCalculator.Business\bin\Debug\netcoreapp2.2\NpvCalculator.Common.pdb
+D:\npv\NpvCalculator.Business\obj\Debug\netcoreapp2.2\NpvCalculator.Business.csprojAssemblyReference.cache
+D:\npv\NpvCalculator.Business\obj\Debug\netcoreapp2.2\NpvCalculator.Business.csproj.CoreCompileInputs.cache
+D:\npv\NpvCalculator.Business\obj\Debug\netcoreapp2.2\NpvCalculator.Business.AssemblyInfoInputs.cache
+D:\npv\NpvCalculator.Business\obj\Debug\netcoreapp2.2\NpvCalculator.Business.AssemblyInfo.cs
+D:\npv\NpvCalculator.Business\obj\Debug\netcoreapp2.2\NpvCalculator.Business.csproj.CopyComplete
+D:\npv\NpvCalculator.Business\obj\Debug\netcoreapp2.2\NpvCalculator.Business.dll
+D:\npv\NpvCalculator.Business\obj\Debug\netcoreapp2.2\NpvCalculator.Business.pdb

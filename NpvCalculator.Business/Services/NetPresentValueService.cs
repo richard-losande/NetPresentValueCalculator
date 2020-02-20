@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using AutoMapper;
 using NpvCalculator.Business.DataTransferObjects;
 using NpvCalculator.Business.Factories;
 
@@ -10,23 +11,18 @@ namespace NpvCalculator.Business.Services
     public class NetPresentValueService : INetPresentValueService
     {
         private readonly INpvCalculatorFactory _npvCalculatorFactory;
-        public NetPresentValueService(INpvCalculatorFactory npvCalculatorFactory)
+        private readonly IMapper _mapper;
+        public NetPresentValueService(INpvCalculatorFactory npvCalculatorFactory, IMapper mapper)
         {
             _npvCalculatorFactory = npvCalculatorFactory;
+            _mapper = mapper;
         }
 
         public IEnumerable<double> GetNetPresentValue(NetPresentValueInputDto netPresentValueInputDto)
         {
             var npvCalculator = _npvCalculatorFactory.Build(netPresentValueInputDto.DiscountRateType);
-            var result = npvCalculator.Compute(new NetPresentValueCalculationInputDto
-            {
-                InitialInvestment = netPresentValueInputDto.InitialInvestment,
-                DiscountRate = netPresentValueInputDto.DiscountRate,
-                IncrementalRate = netPresentValueInputDto.IncrementalRate,
-                LowerBound = netPresentValueInputDto.LowerBound,
-                UpperBound = netPresentValueInputDto.UpperBound,
-                CashFlows = netPresentValueInputDto.CashFlows
-            });
+            var toBeCompute = _mapper.Map<NetPresentValueCalculationInputDto>(netPresentValueInputDto);
+            var result = npvCalculator.Compute(toBeCompute);
             return result;
         }
 
