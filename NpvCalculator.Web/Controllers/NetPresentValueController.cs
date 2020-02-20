@@ -25,5 +25,11 @@ namespace NpvCalculator.Web.Controllers
             var result = _netPresentValueService.GetNetPresentValue(request);
             return Ok(result);
         }
+
+        [HttpPost("Save")]
+        public IActionResult SaveNetPresentValue([FromBody] NetPresentValueInputDto request)
+        {
+            return Ok();
+        }
     }
 }
