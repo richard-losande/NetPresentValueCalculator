@@ -1,12 +1,3 @@
-C:\Users\rlosande\source\repos\NpvCalculator\NpvCalculator.DataAccess\bin\Debug\netcoreapp2.2\NpvCalculator.DataAccess.deps.json
-C:\Users\rlosande\source\repos\NpvCalculator\NpvCalculator.DataAccess\bin\Debug\netcoreapp2.2\NpvCalculator.DataAccess.dll
-C:\Users\rlosande\source\repos\NpvCalculator\NpvCalculator.DataAccess\bin\Debug\netcoreapp2.2\NpvCalculator.DataAccess.pdb
-C:\Users\rlosande\source\repos\NpvCalculator\NpvCalculator.DataAccess\obj\Debug\netcoreapp2.2\NpvCalculator.DataAccess.csprojAssemblyReference.cache
-C:\Users\rlosande\source\repos\NpvCalculator\NpvCalculator.DataAccess\obj\Debug\netcoreapp2.2\NpvCalculator.DataAccess.csproj.CoreCompileInputs.cache
-C:\Users\rlosande\source\repos\NpvCalculator\NpvCalculator.DataAccess\obj\Debug\netcoreapp2.2\NpvCalculator.DataAccess.AssemblyInfoInputs.cache
-C:\Users\rlosande\source\repos\NpvCalculator\NpvCalculator.DataAccess\obj\Debug\netcoreapp2.2\NpvCalculator.DataAccess.AssemblyInfo.cs
-C:\Users\rlosande\source\repos\NpvCalculator\NpvCalculator.DataAccess\obj\Debug\netcoreapp2.2\NpvCalculator.DataAccess.dll
-C:\Users\rlosande\source\repos\NpvCalculator\NpvCalculator.DataAccess\obj\Debug\netcoreapp2.2\NpvCalculator.DataAccess.pdb
 D:\npv\NpvCalculator.DataAccess\bin\Debug\netcoreapp2.2\NpvCalculator.DataAccess.deps.json
 D:\npv\NpvCalculator.DataAccess\bin\Debug\netcoreapp2.2\NpvCalculator.DataAccess.dll
 D:\npv\NpvCalculator.DataAccess\bin\Debug\netcoreapp2.2\NpvCalculator.DataAccess.pdb
@@ -16,3 +7,11 @@ D:\npv\NpvCalculator.DataAccess\obj\Debug\netcoreapp2.2\NpvCalculator.DataAccess
 D:\npv\NpvCalculator.DataAccess\obj\Debug\netcoreapp2.2\NpvCalculator.DataAccess.AssemblyInfo.cs
 D:\npv\NpvCalculator.DataAccess\obj\Debug\netcoreapp2.2\NpvCalculator.DataAccess.dll
 D:\npv\NpvCalculator.DataAccess\obj\Debug\netcoreapp2.2\NpvCalculator.DataAccess.pdb
+C:\Users\rlosande\source\repos\NpvCalculator\NpvCalculator.DataAccess\bin\Debug\netcoreapp2.2\NpvCalculator.DataAccess.deps.json
+C:\Users\rlosande\source\repos\NpvCalculator\NpvCalculator.DataAccess\bin\Debug\netcoreapp2.2\NpvCalculator.DataAccess.dll
+C:\Users\rlosande\source\repos\NpvCalculator\NpvCalculator.DataAccess\bin\Debug\netcoreapp2.2\NpvCalculator.DataAccess.pdb
+C:\Users\rlosande\source\repos\NpvCalculator\NpvCalculator.DataAccess\obj\Debug\netcoreapp2.2\NpvCalculator.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\rlosande\source\repos\NpvCalculator\NpvCalculator.DataAccess\obj\Debug\netcoreapp2.2\NpvCalculator.DataAccess.AssemblyInfoInputs.cache
+C:\Users\rlosande\source\repos\NpvCalculator\NpvCalculator.DataAccess\obj\Debug\netcoreapp2.2\NpvCalculator.DataAccess.AssemblyInfo.cs
+C:\Users\rlosande\source\repos\NpvCalculator\NpvCalculator.DataAccess\obj\Debug\netcoreapp2.2\NpvCalculator.DataAccess.dll
+C:\Users\rlosande\source\repos\NpvCalculator\NpvCalculator.DataAccess\obj\Debug\netcoreapp2.2\NpvCalculator.DataAccess.pdb

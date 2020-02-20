@@ -1413,23 +1413,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\KRazo\\.nuget\\packages\\": {},
+    "C:\\Users\\rlosande\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\npv\\NpvCalculator.DataAccess\\NpvCalculator.DataAccess.csproj",
+      "projectUniqueName": "C:\\Users\\rlosande\\source\\repos\\NpvCalculator\\NpvCalculator.DataAccess\\NpvCalculator.DataAccess.csproj",
       "projectName": "NpvCalculator.DataAccess",
-      "projectPath": "D:\\npv\\NpvCalculator.DataAccess\\NpvCalculator.DataAccess.csproj",
-      "packagesPath": "C:\\Users\\KRazo\\.nuget\\packages\\",
-      "outputPath": "D:\\npv\\NpvCalculator.DataAccess\\obj\\",
+      "projectPath": "C:\\Users\\rlosande\\source\\repos\\NpvCalculator\\NpvCalculator.DataAccess\\NpvCalculator.DataAccess.csproj",
+      "packagesPath": "C:\\Users\\rlosande\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\rlosande\\source\\repos\\NpvCalculator\\NpvCalculator.DataAccess\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\KRazo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\rlosande\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

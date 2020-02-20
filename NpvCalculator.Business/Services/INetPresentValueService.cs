@@ -8,6 +8,5 @@ namespace NpvCalculator.Business.Services
     public interface INetPresentValueService
     {
         IEnumerable<double> GetNetPresentValue(NetPresentValueInputDto netPresentValueInputDto);
-        NetPresentValueInputDto SaveNetPresentValue(NetPresentValueInputDto netPresentValueInputDto);
     }
 }
