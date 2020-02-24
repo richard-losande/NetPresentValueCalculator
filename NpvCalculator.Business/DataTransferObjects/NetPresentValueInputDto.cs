@@ -10,13 +10,7 @@ namespace NpvCalculator.Business.DataTransferObjects
         public double UpperBound { get; set; }
         public double LowerBound { get; set; }
         public double IncrementalRate { get; set; }
-        public List<CashFlow> CashFlows { get; set; }
+        public List<CashFlowInputDto> CashFlows { get; set; }
         public DiscountRateType DiscountRateType { get; set; }
-    }
-
-    public class CashFlow
-    {
-        public int Id { get; set; }
-        public double CashFlowAmount { get; set; }
     }
 }

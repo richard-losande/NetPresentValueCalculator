@@ -206,17 +206,16 @@ const styles = theme => ({
                    />
                    <Button variant="contained" color="secondary" align="right" onClick={this.handleRemoveCashFlow.bind(key)} >
                    Delete CashFlow
-                 </Button></React.Fragment>)}   
-         
-                </form>
-                <React.Fragment>  
-                <Button className ={this.props.classes.marginRight}  onClick={ () => this.appendInput() } variant="contained" color="primary" align="right" >
+                 </Button></React.Fragment>)}  
+                 &nbsp;
+                 &nbsp; 
+                 <Button className ={this.props.classes.marginRight}  onClick={ () => this.appendInput() } variant="contained" color="primary" align="right" >
                   Add CashFlow
                 </Button>          
                 <Button variant="contained" color="secondary" align="right" type="submit">
                   Calculate
-                </Button>  
-                </React.Fragment>
+                </Button>           
+                </form>
                 </Container>
               </React.Fragment>
             );
