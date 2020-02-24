@@ -14,8 +14,8 @@ namespace NpvCalculator.Business.Services
         private readonly IMapper _mapper;
         public NetPresentValueService(INpvCalculatorFactory npvCalculatorFactory, IMapper mapper)
         {
-            _npvCalculatorFactory = npvCalculatorFactory;
-            _mapper = mapper;
+            _npvCalculatorFactory = npvCalculatorFactory ?? throw  new ArgumentException(nameof(npvCalculatorFactory));
+            _mapper = mapper ?? throw new ArgumentException(nameof(mapper));
         }
 
         public IEnumerable<double> GetNetPresentValue(NetPresentValueInputDto netPresentValueInputDto)

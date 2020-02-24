@@ -471,7 +471,6 @@
       "path": "microsoft.extensions.dependencyinjection.abstractions/2.0.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
         "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
         "microsoft.extensions.dependencyinjection.abstractions.2.0.0.nupkg.sha512",
@@ -808,6 +807,7 @@
       "path": "microsoft.netcore.targets/2.0.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "lib/netstandard1.0/_._",
@@ -1481,37 +1481,38 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\rlosande\\.nuget\\packages\\": {},
+    "C:\\Users\\jeinz\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\rlosande\\source\\repos\\NpvCalculator\\NpvCalculator.Business\\NpvCalculator.Business.csproj",
+      "projectUniqueName": "C:\\Users\\jeinz\\Desktop\\NetPresentValueCalculator\\NpvCalculator.Business\\NpvCalculator.Business.csproj",
       "projectName": "NpvCalculator.Business",
-      "projectPath": "C:\\Users\\rlosande\\source\\repos\\NpvCalculator\\NpvCalculator.Business\\NpvCalculator.Business.csproj",
-      "packagesPath": "C:\\Users\\rlosande\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\rlosande\\source\\repos\\NpvCalculator\\NpvCalculator.Business\\obj\\",
+      "projectPath": "C:\\Users\\jeinz\\Desktop\\NetPresentValueCalculator\\NpvCalculator.Business\\NpvCalculator.Business.csproj",
+      "packagesPath": "C:\\Users\\jeinz\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\jeinz\\Desktop\\NetPresentValueCalculator\\NpvCalculator.Business\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\rlosande\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\jeinz\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.2"
       ],
       "sources": {
+        "C:\\NUGET\\Telerik.XamainForms.UI.2019.1.220 R1 SP1": {},
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "C:\\Users\\rlosande\\source\\repos\\NpvCalculator\\NpvCalculator.Common\\NpvCalculator.Common.csproj": {
-              "projectPath": "C:\\Users\\rlosande\\source\\repos\\NpvCalculator\\NpvCalculator.Common\\NpvCalculator.Common.csproj"
+            "C:\\Users\\jeinz\\Desktop\\NetPresentValueCalculator\\NpvCalculator.Common\\NpvCalculator.Common.csproj": {
+              "projectPath": "C:\\Users\\jeinz\\Desktop\\NetPresentValueCalculator\\NpvCalculator.Common\\NpvCalculator.Common.csproj"
             }
           }
         }

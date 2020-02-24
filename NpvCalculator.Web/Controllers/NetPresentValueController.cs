@@ -16,7 +16,7 @@ namespace NpvCalculator.Web.Controllers
         private readonly INetPresentValueService _netPresentValueService;
         public NetPresentValueController(INetPresentValueService eNetPresentValueService)
         {
-            _netPresentValueService = eNetPresentValueService;
+            _netPresentValueService = eNetPresentValueService ?? throw new ArgumentException(nameof(eNetPresentValueService));
         }
 
         [HttpPost("Compute")]
