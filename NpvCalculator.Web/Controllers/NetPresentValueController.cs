@@ -40,7 +40,7 @@ namespace NpvCalculator.Web.Controllers
             return Ok(transactions);
         }
 
-        [HttpGet("transactions/[id]")]
+        [HttpGet("transactions/{id}")]
         public IActionResult GetTransactionById(int id)
         {
             var transaction = _netPresentValueService.GetTransactionById(id);
