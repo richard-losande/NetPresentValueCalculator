@@ -8,6 +8,7 @@ import axios from 'axios';
 import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
 import Select from '@material-ui/core/Select';
+import { Label } from "reactstrap";
 
 const styles = theme => ({
     container: {
@@ -18,6 +19,10 @@ const styles = theme => ({
     textField: {
         marginBottom : theme.spacing(2)
         
+      },
+      label:{
+        fontSize : 20,
+        color :  "blue"
       },
       dense: {
         marginTop: 16,  
@@ -48,6 +53,7 @@ const styles = theme => ({
                 lowerbound:0,
                 incrementalrate : 0,
                 discountratetype : "Fixed", 
+                netpresentvalueresults :[]
             };
 
 
@@ -68,8 +74,7 @@ const styles = theme => ({
             console.log(netrepresetvaluedata);
             axios.post(`/api/NetPresentValue/Compute`, netrepresetvaluedata)
       .then(res => {
-        console.log(res);
-        console.log(res.data);
+       this.setState({netpresentvalueresults : res.data})
       })
 
     }
@@ -214,8 +219,15 @@ const styles = theme => ({
                 </Button>          
                 <Button variant="contained" color="secondary" align="right" type="submit">
                   Calculate
-                </Button>           
+                </Button>                                                
                 </form>
+                  {this.state.netpresentvalueresults.map((data,index) => 
+                  <React.Fragment key ={index}>
+                  <Label>{data}</Label>
+                  <Label>,</Label>
+                  </React.Fragment>
+                  )}
+
                 </Container>
               </React.Fragment>
             );

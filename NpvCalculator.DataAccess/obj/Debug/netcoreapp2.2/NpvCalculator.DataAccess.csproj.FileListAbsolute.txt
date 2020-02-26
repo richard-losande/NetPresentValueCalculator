@@ -24,3 +24,4 @@ C:\Users\jeinz\Desktop\NetPresentValueCalculator\NpvCalculator.DataAccess\obj\De
 C:\Users\jeinz\Desktop\NetPresentValueCalculator\NpvCalculator.DataAccess\obj\Debug\netcoreapp2.2\NpvCalculator.DataAccess.AssemblyInfo.cs
 C:\Users\jeinz\Desktop\NetPresentValueCalculator\NpvCalculator.DataAccess\obj\Debug\netcoreapp2.2\NpvCalculator.DataAccess.dll
 C:\Users\jeinz\Desktop\NetPresentValueCalculator\NpvCalculator.DataAccess\obj\Debug\netcoreapp2.2\NpvCalculator.DataAccess.pdb
+C:\Users\rlosande\source\repos\NpvCalculator\NpvCalculator.DataAccess\obj\Debug\netcoreapp2.2\NpvCalculator.DataAccess.csprojAssemblyReference.cache
