@@ -13,5 +13,6 @@ namespace NpvCalculator.Business.DataTransferObjects
         public double IncrementalRate { get; set; }
         public List<CashFlowInputDto> CashFlows { get; set; }
         public DiscountRateType DiscountRateType { get; set; }
+        public List<NetPresentValueResultInputDto> NetPresentValueResults { get; set; }
     }
 }
