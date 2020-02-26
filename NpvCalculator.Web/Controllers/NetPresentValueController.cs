@@ -19,17 +19,32 @@ namespace NpvCalculator.Web.Controllers
             _netPresentValueService = eNetPresentValueService ?? throw new ArgumentException(nameof(eNetPresentValueService));
         }
 
-        [HttpPost("Compute")]
-        public IActionResult ComputeNetPresentValue([FromBody]NetPresentValueInputDto request)
+        [HttpPost("compute")]
+        public IActionResult ComputeNetPresentValue([FromBody]NetPresentValueInputDto netPresentValueInputDto)
         {
-            var result = _netPresentValueService.GetNetPresentValue(request);
+            var result = _netPresentValueService.GetNetPresentValue(netPresentValueInputDto);
             return Ok(result);
         }
 
-        [HttpPost("Save")]
-        public IActionResult SaveNetPresentValue([FromBody] NetPresentValueInputDto request)
+        [HttpPost("save")]
+        public IActionResult SaveNetPresentValue([FromBody] NetPresentValueInputDto netPresentValueInputDto)
         {
+            _netPresentValueService.SaveTransaction(netPresentValueInputDto);
             return Ok();
+        }
+
+        [HttpGet("transactions")]
+        public IActionResult GetAllTransactions()
+        {
+            var transactions = _netPresentValueService.GetAllTransactions();
+            return Ok(transactions);
+        }
+
+        [HttpGet("transactions/[id]")]
+        public IActionResult GetTransactionById(int id)
+        {
+            var transaction = _netPresentValueService.GetTransactionById(id);
+            return Ok(transaction);
         }
     }
 }

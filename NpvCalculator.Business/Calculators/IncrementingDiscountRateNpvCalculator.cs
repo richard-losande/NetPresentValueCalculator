@@ -6,7 +6,7 @@ using NpvCalculator.Business.DataTransferObjects;
 
 namespace NpvCalculator.Business.Calculators
 {
-    public class IncrementingDiscountRateNpvCalculator : IIncrementingDiscountRateNpvCalculator
+    public class IncrementingDiscountRateNpvCalculator : INetPresentValueCalculator
     {
         public IEnumerable<double> Compute(NetPresentValueCalculationInputDto input)
         {

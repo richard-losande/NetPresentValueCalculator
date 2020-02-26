@@ -26,5 +26,20 @@ namespace NpvCalculator.Business.Services
             return result;
         }
 
+        public IEnumerable<NetPresentValueInputDto> GetAllTransactions()
+        {
+            throw new NotImplementedException();
+        }
+
+        public NetPresentValueInputDto GetTransactionById(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void SaveTransaction(NetPresentValueInputDto netPresentValueInputDto)
+        {
+            throw new NotImplementedException();
+        }
+                
     }
 }
