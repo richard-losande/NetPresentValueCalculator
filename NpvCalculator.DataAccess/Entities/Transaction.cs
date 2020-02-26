@@ -1,11 +1,14 @@
-﻿using System;
+﻿using SQLite;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace NpvCalculator.DataAccess.Entities
 {
+    [Table("Transaction")]
     public class Transaction
     {
+        [PrimaryKey]
         public int TransactionId { get; set; }
         public decimal InitialInvestment { get; set; }
         public decimal DiscountRate { get; set; }
