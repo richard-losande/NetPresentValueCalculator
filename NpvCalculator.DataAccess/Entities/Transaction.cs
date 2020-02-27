@@ -8,13 +8,13 @@ namespace NpvCalculator.DataAccess.Entities
     [Table("Transaction")]
     public class Transaction
     {
-        [PrimaryKey]
-        public int TransactionId { get; set; }
+        [PrimaryKey, AutoIncrement]
+        public int Id { get; set; }
         public decimal InitialInvestment { get; set; }
         public decimal DiscountRate { get; set; }
         public decimal UpperBound { get; set; }
         public decimal LowerBound { get; set; }
-        public decimal IncrementalRateType { get; set; }
+        public decimal IncrementalRate { get; set; }
         public string DiscountRateType { get; set; }
     }
 }

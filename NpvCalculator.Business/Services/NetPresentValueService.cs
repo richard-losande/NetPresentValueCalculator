@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using AutoMapper;
 using NpvCalculator.Business.DataTransferObjects;
 using NpvCalculator.Business.Factories;
@@ -38,9 +39,9 @@ namespace NpvCalculator.Business.Services
             return result;
         }
 
-        public IEnumerable<NetPresentValueInputDto> GetAllTransactions()
+        public async Task<IEnumerable<NetPresentValueInputDto>> GetAllTransactions()
         {
-            var transactions = _transactionRepository.GetAllTransactions();
+            var transactions = await _transactionRepository.GetAllTransactions();
             var transactionsDto = _mapper.Map<IEnumerable<NetPresentValueInputDto>>(transactions);
             return transactionsDto;
         }
@@ -53,19 +54,26 @@ namespace NpvCalculator.Business.Services
         public void SaveTransaction(NetPresentValueInputDto netPresentValueInputDto)
         {
             var transaction = _mapper.Map<Transaction>(netPresentValueInputDto);
-            _transactionRepository.InsertTransaction(transaction);
+             var transactionId =  _transactionRepository.InsertTransaction(transaction).Result;
+             foreach (var item in netPresentValueInputDto.CashFlows)
+             {
+                 item.TransactionId = Convert.ToInt32(transactionId);
+             }
+
+             foreach (var item in netPresentValueInputDto.NetPresentValueResults)
+             {
+                item.TransactionId = Convert.ToInt32(transactionId);
+            }
 
             var cashFlows = _mapper.Map<IEnumerable<CashFlow>>(netPresentValueInputDto.CashFlows);
             cashFlows.ToList().ForEach(c =>
             {
-                c.TransactionId = transaction.TransactionId;
                 _cashFlowRepository.InsertCashFlow(c);
             });
 
             var results = _mapper.Map<IEnumerable<NetPresentValue>>(netPresentValueInputDto.NetPresentValueResults);
             results.ToList().ForEach(r =>
             {
-                r.TransactionId = transaction.TransactionId;
                 _netPresentValueRepository.InsertNetPresentValue(r);
             });
         }

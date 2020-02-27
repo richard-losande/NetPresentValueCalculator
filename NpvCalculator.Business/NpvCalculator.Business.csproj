@@ -11,6 +11,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\NpvCalculator.Common\NpvCalculator.Common.csproj" />
+    <ProjectReference Include="..\NpvCalculator.DataAccess\NpvCalculator.DataAccess.csproj" />
   </ItemGroup>
 
 </Project>

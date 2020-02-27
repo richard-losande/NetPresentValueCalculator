@@ -6,21 +6,17 @@ using NpvCalculator.DataAccess.Entities;
 
 namespace NpvCalculator.DataAccess.Repositories
 {
-    public class CashFlowRepository :RepositoryBase<CashFlow>, ICashFlowRepository
+    public class CashFlowRepository : RepositoryBase<CashFlow>, ICashFlowRepository
     {
         public async Task<long> InsertCashFlow(CashFlow cashFlow)
         {
-            using (var connection = GetSQLiteConnection())
-            {
-                return connection.Insert(cashFlow); 
-            }
+            var connection = GetSQLiteConnection();
+            return await connection.InsertAsync(cashFlow);
         }
         public async Task UpdateCashFlow(CashFlow cashFlow)
         {
-            using (var connection = GetSQLiteConnection())
-            {
-                connection.Update(cashFlow);
-            }
+            var connection = GetSQLiteConnection();
+             await connection.UpdateAsync(cashFlow);
         }
     }
 }

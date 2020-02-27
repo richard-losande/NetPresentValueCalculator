@@ -7,6 +7,9 @@ using Microsoft.AspNetCore.SpaServices.ReactDevelopmentServer;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using AutoMapper;
+using Microsoft.EntityFrameworkCore;
+
+
 namespace NpvCalculator.Web
 {
     public class Startup
@@ -30,7 +33,6 @@ namespace NpvCalculator.Web
                     filter.Where(implementation => implementation.Name.Equals($"I{service.Name}", StringComparison.OrdinalIgnoreCase)))
                 .WithTransientLifetime());
             // In production, the React files will be served from this directory
-
             services.AddAutoMapper(typeof(Business.MapperProfiles.MainProfile).GetTypeInfo().Assembly);
 
             services.AddSpaStaticFiles(configuration =>

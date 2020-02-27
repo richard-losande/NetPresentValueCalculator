@@ -8,7 +8,7 @@ namespace NpvCalculator.Business.DataTransferObjects
     {
         public int Id { get; set; }
         public double CashFlowAmount { get; set; }
-        public int TranscationId { get; set; }
+        public int TransactionId { get; set; }
 
     }
 }

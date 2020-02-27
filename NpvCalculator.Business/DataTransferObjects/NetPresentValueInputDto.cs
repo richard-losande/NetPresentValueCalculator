@@ -5,7 +5,7 @@ namespace NpvCalculator.Business.DataTransferObjects
 {
     public class NetPresentValueInputDto
     {
-        public int TransactionId { get; set; }
+        public int Id { get; set; }
         public double InitialInvestment { get; set; }
         public double DiscountRate { get; set; }
         public double UpperBound { get; set; }

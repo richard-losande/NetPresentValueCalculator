@@ -1,7 +1,9 @@
 ﻿
+using System.Transactions;
 using AutoMapper;
 using NpvCalculator.Business.DataTransferObjects;
 using NpvCalculator.DataAccess.Entities;
+
 
 namespace NpvCalculator.Business.MapperProfiles
 {
@@ -15,10 +17,9 @@ namespace NpvCalculator.Business.MapperProfiles
         public void Profile()
         {
             CreateMap<NetPresentValueInputDto, NetPresentValueCalculationInputDto>();
-            CreateMap<Transaction, NetPresentValueInputDto>();
+            CreateMap<DataAccess.Entities.Transaction, NetPresentValueInputDto>().ReverseMap();
             CreateMap<NetPresentValue, NetPresentValueResultInputDto>();
             CreateMap<CashFlow, CashFlowInputDto>();
-            CreateMap<NetPresentValueInputDto, Transaction>();
             CreateMap<NetPresentValueResultInputDto, NetPresentValue>();
             CreateMap<CashFlowInputDto, CashFlow>();
         }

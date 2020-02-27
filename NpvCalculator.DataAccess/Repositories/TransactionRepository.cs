@@ -11,57 +11,27 @@ namespace NpvCalculator.DataAccess.Repositories
     {
         public async Task<IEnumerable<Transaction>> GetAllTransactions()
         {
-            string query = $"SELECT * FROM Transaction";
-            IEnumerable<Transaction> transactions = null;
-            await Task.Run(() =>
-            {
-                using (var connection = GetSQLiteConnection())
-                {
-                    transactions = connection.Query<Transaction>(query);
-                }
-            });
-
-            return transactions;
+            string query = $"SELECT * FROM [Transaction]";
+            var connection = GetSQLiteConnection();
+            return await connection.QueryAsync<Transaction>(query);
         }
 
         public async Task<Transaction> GetTransactionById(int id)
         {
             string query = $"SELECT * FROM Transaction WHERE TransacationId = {id}";
-            Transaction transaction = null;
-            await Task.Run(() =>
-            {
-                using (var connection = GetSQLiteConnection())
-                {
-                    transaction = connection.Query<Transaction>(query).FirstOrDefault();
-                }
-            });
-            
-            return transaction;
+            var connection = GetSQLiteConnection();
+            return  await connection.FindWithQueryAsync<Transaction>(query);
         }
-
         public async Task<long> InsertTransaction(Transaction transaction)
         {
-            int result = 0;
-            await Task.Run(() =>
-            {
-                using (var connection = GetSQLiteConnection())
-                {
-                    result = connection.Insert(transaction);
-                }
-            });
-
-            return result;
+            var connection = GetSQLiteConnection();
+            await connection.InsertAsync(transaction);
+            return transaction.Id;
         }
         public async Task UpdateTransaction(Transaction transaction)
         {
-            await Task.Run(() =>
-            {
-                using (var connection = GetSQLiteConnection())
-                {
-                    connection.Update(transaction);
-                }
-            });
-            
+            var connection = GetSQLiteConnection();
+            connection.UpdateAsync(transaction);
         }
     }
 }
