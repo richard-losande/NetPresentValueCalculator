@@ -8,7 +8,15 @@ import axios from 'axios';
 import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
 import Select from '@material-ui/core/Select';
-import { Label } from "reactstrap";
+import { Alert } from "reactstrap";
+import { Box } from "@material-ui/core";
+import Table from '@material-ui/core/Table';
+import TableBody from '@material-ui/core/TableBody';
+import TableCell from '@material-ui/core/TableCell';
+import TableContainer from '@material-ui/core/TableContainer';
+import TableHead from '@material-ui/core/TableHead';
+import TableRow from '@material-ui/core/TableRow';
+import Paper from '@material-ui/core/Paper';
 
 const styles = theme => ({
     container: {
@@ -53,14 +61,20 @@ const styles = theme => ({
                 lowerbound:0,
                 incrementalrate : 0,
                 discountratetype : "Fixed", 
-                netpresentvalueresults :[]
+                netpresentvalueresults :[],
+                result :[]
             };
 
 
         }
 
+        componentDidMount() {
+          axios.get(`/api/NetPresentValue/transactions`)
+      .then(response => {
+            this.setState({ result: response.data });
+      });}
+      
         handleSumit = event =>{
-
             event.preventDefault();
             const netrepresetvaluedata = {
                 InitialInvestment : this.state.initialinvestment,
@@ -74,12 +88,17 @@ const styles = theme => ({
             console.log(netrepresetvaluedata);
             axios.post(`/api/NetPresentValue/Compute`, netrepresetvaluedata)
       .then(res => {
-       this.setState({netpresentvalueresults : res.data})
+        let results = [];
+        res.data.map((data,index) => {
+          return results.push({id: index, amount: data})
+        });
+        console.log(results)
+       this.setState({netpresentvalueresults : results})
       })
 
     }
         appendInput() {
-            var newInput = { id:this.state.cashflows.length == 0 ? 1: this.state.cashflows.length + 1, cashflowamount: 0 }
+            var newInput = { id:this.state.cashflows.length === 0 ? 1: this.state.cashflows.length + 1, cashflowamount: 0 }
             this.setState({
                 ...this.state,
                cashflows: [...this.state.cashflows, newInput]
@@ -128,6 +147,31 @@ const styles = theme => ({
           {
             this.setState({ incrementalrate: event.target.value });
           }
+
+          handleSave = event =>{
+
+            event.preventDefault();
+            const netrepresetvaluedata = {
+                InitialInvestment : this.state.initialinvestment,
+                DiscountRate : this.state.discountrate,
+                UpperBound : this.state.upperbound,
+                LowerBound : this.state.lowerbound,
+                IncrementalRate : this.state.incrementalrate,
+                discountratetype : this.state.discountratetype,
+                cashflows : this.state.cashflows,
+                netpresentvalueresults : this.state.netpresentvalueresults
+            }
+            console.log(netrepresetvaluedata);
+            axios.post(`/api/NetPresentValue/save`, netrepresetvaluedata)
+      .then(res => {
+      })
+      axios.get(`/api/NetPresentValue/transactions`)
+      .then(response => {
+            this.setState({ result: response.data });
+      });
+      alert("saved");
+
+    }
           
 
         render() {
@@ -137,28 +181,29 @@ const styles = theme => ({
                 <Container maxWidth="sm">
                 <React.Fragment>  
                 <InputLabel >Discount rate type</InputLabel>
-        <Select
+                <Box width="100%">
+        <Select 
           value={this.state.discountratetype}
           onChange={this.handleChangeOnDropDownAge.bind(this)}
         >
           <MenuItem value={"Fixed"}>Fixed</MenuItem>
           <MenuItem value={"Incremental"}>Incremental</MenuItem>
-        </Select>
+        </Select></Box>
         </React.Fragment>
         &nbsp;
         &nbsp;
         &nbsp;
         
-              <React.Fragment>              
+             {this.state.discountratetype === "Incremental" ? <React.Fragment>              
         <TextField 
                 label="Upper Bound"
                 id="outlined-basic" 
                 variant="outlined"
                 value={this.state.upperbound}
                  onChange={this.handleChangeUpperBound.bind(this)} 
-                 fullWidth/>  
-                  &nbsp;
-                &nbsp;
+                 fullWidth/> 
+                         &nbsp;
+        &nbsp; 
                     <TextField 
                 label="Lower Bound"
                 id="outlined-basic" 
@@ -166,8 +211,8 @@ const styles = theme => ({
                 value={this.state.lowerbound}
                  onChange={this.handleChangeLowerBound.bind(this)} 
                  fullWidth/>  
-                  &nbsp;
-                &nbsp;
+                         &nbsp;
+        &nbsp;
                                  <TextField 
                 label="Incremental Rate"
                 id="outlined-basic" 
@@ -177,7 +222,7 @@ const styles = theme => ({
                  fullWidth/>  
                   &nbsp;
                 &nbsp;
-                </React.Fragment>
+                </React.Fragment> : ""}
                   <form className={this.props.classes.container} noValidate autoComplete="off" onSubmit= {this.handleSumit} >
 
                   &nbsp;
@@ -196,9 +241,11 @@ const styles = theme => ({
                 value={this.state.discountrate}
                  onChange={this.handleChangeDiscountRate.bind(this)}
                   fullWidth/>
-                 {this.state.cashflows.map((input,key) =>
-                 <React.Fragment key ={key}>
+                  <Box width="100%">
+                  {this.state.cashflows.map((input,key) =>
+                  <React.Fragment key ={key}>
                    &nbsp;
+                   <Box width="100%">
                     <TextField
                     label="Cash Flow"
                     id={input.value}
@@ -211,23 +258,52 @@ const styles = theme => ({
                    />
                    <Button variant="contained" color="secondary" align="right" onClick={this.handleRemoveCashFlow.bind(key)} >
                    Delete CashFlow
-                 </Button></React.Fragment>)}  
-                 &nbsp;
-                 &nbsp; 
+                 </Button></Box></React.Fragment>)}  
+                 </Box>
                  <Button className ={this.props.classes.marginRight}  onClick={ () => this.appendInput() } variant="contained" color="primary" align="right" >
                   Add CashFlow
                 </Button>          
                 <Button variant="contained" color="secondary" align="right" type="submit">
                   Calculate
-                </Button>                                                
+                </Button>
+                <Button variant="contained" color="secondary" align="right" type="submit" onClick={this.handleSave}>
+                  Save
+                </Button>                                                  
                 </form>
                   {this.state.netpresentvalueresults.map((data,index) => 
                   <React.Fragment key ={index}>
-                  <Label>{data}</Label>
-                  <Label>,</Label>
+                    <Alert severity="success" >{data.amount}</Alert>
+                  {/* <Label>{data}</Label>
+                  <Label>,</Label> */}
                   </React.Fragment>
                   )}
-
+                
+                <TableContainer component={Paper}>
+                  <Table aria-label="simple table">
+                    <TableHead>
+                      <TableRow>
+                        <TableCell>Id</TableCell>
+                        <TableCell>initialInvestment</TableCell>
+                        <TableCell>discountRate</TableCell>
+                        <TableCell>upperBound</TableCell>
+                        <TableCell>lowerBound</TableCell>
+                        <TableCell>incrementalRate</TableCell>
+                      </TableRow>
+                    </TableHead>
+                    <TableBody>
+                      {this.state.result.map((data,index) => (
+                        <TableRow key={`id_${index}`}>
+                          <TableCell>{data.id}</TableCell>
+                          <TableCell>{data.initialInvestment}</TableCell>
+                          <TableCell>{data.discountRate}</TableCell>
+                          <TableCell>{data.upperBound}</TableCell>
+                          <TableCell>{data.lowerBound}</TableCell>
+                          <TableCell>{data.incrementalRate}</TableCell>
+                        </TableRow>
+                      ))}
+                    </TableBody>
+                  </Table>
+                </TableContainer>
                 </Container>
               </React.Fragment>
             );

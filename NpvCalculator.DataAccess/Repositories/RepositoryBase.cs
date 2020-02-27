@@ -8,11 +8,12 @@ namespace NpvCalculator.DataAccess.Repositories
 {
     public class RepositoryBase<T> where T: class
     {
-        public SQLiteConnection GetSQLiteConnection()
+
+        public static string ConnectionString => Environment.CurrentDirectory + @"\NpvCalculator.sqlite";
+        public static SQLiteAsyncConnection GetSQLiteConnection()
         {
-            var dbPath = Environment.CurrentDirectory + @"\NpvDb.db";
-            var sQLiteConnection = new SQLiteConnection($"Data Source={dbPath};Version=3;");
-            return sQLiteConnection;
+            var sqlLiteConnection = new SQLiteConnectionString(ConnectionString);
+            return new SQLiteAsyncConnection(sqlLiteConnection);
         }
     }
 }

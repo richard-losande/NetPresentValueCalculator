@@ -34,9 +34,9 @@ namespace NpvCalculator.Web.Controllers
         }
 
         [HttpGet("transactions")]
-        public IActionResult GetAllTransactions()
+        public async  Task<IActionResult> GetAllTransactions()
         {
-            var transactions = _netPresentValueService.GetAllTransactions();
+            var transactions = await _netPresentValueService.GetAllTransactions();
             return Ok(transactions);
         }
 

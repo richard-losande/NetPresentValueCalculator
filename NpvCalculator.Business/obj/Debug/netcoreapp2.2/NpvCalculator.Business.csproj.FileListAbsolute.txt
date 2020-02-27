@@ -34,3 +34,5 @@ C:\Users\rlosande\source\repos\NpvCalculator\NpvCalculator.Business\bin\Debug\ne
 C:\Users\rlosande\source\repos\NpvCalculator\NpvCalculator.Business\obj\Debug\netcoreapp2.2\NpvCalculator.Business.csproj.CopyComplete
 C:\Users\rlosande\source\repos\NpvCalculator\NpvCalculator.Business\obj\Debug\netcoreapp2.2\NpvCalculator.Business.dll
 C:\Users\rlosande\source\repos\NpvCalculator\NpvCalculator.Business\obj\Debug\netcoreapp2.2\NpvCalculator.Business.pdb
+C:\Users\rlosande\source\repos\NpvCalculator\NpvCalculator.Business\bin\Debug\netcoreapp2.2\NpvCalculator.DataAccess.dll
+C:\Users\rlosande\source\repos\NpvCalculator\NpvCalculator.Business\bin\Debug\netcoreapp2.2\NpvCalculator.DataAccess.pdb
