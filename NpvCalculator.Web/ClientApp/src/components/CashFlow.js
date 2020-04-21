@@ -77,13 +77,13 @@ const styles = theme => ({
         handleSumit = event =>{
             event.preventDefault();
             const netrepresetvaluedata = {
-                InitialInvestment : this.state.initialinvestment,
-                DiscountRate : this.state.discountrate,
-                UpperBound : this.state.upperbound,
-                LowerBound : this.state.lowerbound,
-                IncrementalRate : this.state.incrementalrate,
-                discountratetype : this.state.discountratetype,
-                cashflows : this.state.cashflows
+                InitialInvestment : parseFloat(this.state.initialinvestment),
+                DiscountRate : parseFloat(this.state.discountrate),
+                UpperBound : parseFloat(this.state.upperbound),
+                LowerBound : parseFloat(this.state.lowerbound),
+                IncrementalRate :parseFloat(this.state.incrementalrate),
+                discountratetype : this.state.discountratetype === "Fixed" ? 0 : 1,
+                cashflows : this.state.cashflows,
             }
             console.log(netrepresetvaluedata);
             axios.post(`/api/NetPresentValue/Compute`, netrepresetvaluedata)
@@ -108,7 +108,7 @@ const styles = theme => ({
             const arr = this.state.cashflows;
             const cashflows = arr.map((input, index) => {
                 if (key === index)
-                    input.cashflowamount = event.target.value;             
+                    input.cashflowamount = parseFloat(event.target.value);             
                 return input;
             });
             this.setState({ cashflows });
@@ -152,12 +152,12 @@ const styles = theme => ({
 
             event.preventDefault();
             const netrepresetvaluedata = {
-                InitialInvestment : this.state.initialinvestment,
-                DiscountRate : this.state.discountrate,
-                UpperBound : this.state.upperbound,
-                LowerBound : this.state.lowerbound,
-                IncrementalRate : this.state.incrementalrate,
-                discountratetype : this.state.discountratetype,
+                InitialInvestment : parseFloat(this.state.initialinvestment),
+                DiscountRate : parseFloat(this.state.discountrate),
+                UpperBound : parseFloat(this.state.upperbound),
+                LowerBound : parseFloat(this.state.lowerbound),
+                IncrementalRate :parseFloat(this.state.incrementalrate),
+                discountratetype : this.state.discountratetype === "Fixed" ? 0 : 1,
                 cashflows : this.state.cashflows,
                 netpresentvalueresults : this.state.netpresentvalueresults
             }

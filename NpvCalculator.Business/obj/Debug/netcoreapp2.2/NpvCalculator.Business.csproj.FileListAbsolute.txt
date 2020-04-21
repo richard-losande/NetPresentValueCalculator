@@ -36,3 +36,16 @@ C:\Users\rlosande\source\repos\NpvCalculator\NpvCalculator.Business\obj\Debug\ne
 C:\Users\rlosande\source\repos\NpvCalculator\NpvCalculator.Business\obj\Debug\netcoreapp2.2\NpvCalculator.Business.pdb
 C:\Users\rlosande\source\repos\NpvCalculator\NpvCalculator.Business\bin\Debug\netcoreapp2.2\NpvCalculator.DataAccess.dll
 C:\Users\rlosande\source\repos\NpvCalculator\NpvCalculator.Business\bin\Debug\netcoreapp2.2\NpvCalculator.DataAccess.pdb
+C:\Users\richardl\Desktop\Practice Project\NpvCalculator\NpvCalculator.Business\bin\Debug\netcoreapp2.2\NpvCalculator.Business.deps.json
+C:\Users\richardl\Desktop\Practice Project\NpvCalculator\NpvCalculator.Business\bin\Debug\netcoreapp2.2\NpvCalculator.Business.dll
+C:\Users\richardl\Desktop\Practice Project\NpvCalculator\NpvCalculator.Business\bin\Debug\netcoreapp2.2\NpvCalculator.Business.pdb
+C:\Users\richardl\Desktop\Practice Project\NpvCalculator\NpvCalculator.Business\bin\Debug\netcoreapp2.2\NpvCalculator.Common.dll
+C:\Users\richardl\Desktop\Practice Project\NpvCalculator\NpvCalculator.Business\bin\Debug\netcoreapp2.2\NpvCalculator.DataAccess.dll
+C:\Users\richardl\Desktop\Practice Project\NpvCalculator\NpvCalculator.Business\bin\Debug\netcoreapp2.2\NpvCalculator.Common.pdb
+C:\Users\richardl\Desktop\Practice Project\NpvCalculator\NpvCalculator.Business\bin\Debug\netcoreapp2.2\NpvCalculator.DataAccess.pdb
+C:\Users\richardl\Desktop\Practice Project\NpvCalculator\NpvCalculator.Business\obj\Debug\netcoreapp2.2\NpvCalculator.Business.csprojAssemblyReference.cache
+C:\Users\richardl\Desktop\Practice Project\NpvCalculator\NpvCalculator.Business\obj\Debug\netcoreapp2.2\NpvCalculator.Business.AssemblyInfoInputs.cache
+C:\Users\richardl\Desktop\Practice Project\NpvCalculator\NpvCalculator.Business\obj\Debug\netcoreapp2.2\NpvCalculator.Business.AssemblyInfo.cs
+C:\Users\richardl\Desktop\Practice Project\NpvCalculator\NpvCalculator.Business\obj\Debug\netcoreapp2.2\NpvCalculator.Business.csproj.CopyComplete
+C:\Users\richardl\Desktop\Practice Project\NpvCalculator\NpvCalculator.Business\obj\Debug\netcoreapp2.2\NpvCalculator.Business.dll
+C:\Users\richardl\Desktop\Practice Project\NpvCalculator\NpvCalculator.Business\obj\Debug\netcoreapp2.2\NpvCalculator.Business.pdb

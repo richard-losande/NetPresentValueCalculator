@@ -24,3 +24,11 @@ C:\Users\jeinz\Desktop\NetPresentValueCalculator\NpvCalculator.Common\obj\Debug\
 C:\Users\jeinz\Desktop\NetPresentValueCalculator\NpvCalculator.Common\obj\Debug\netcoreapp2.2\NpvCalculator.Common.AssemblyInfo.cs
 C:\Users\jeinz\Desktop\NetPresentValueCalculator\NpvCalculator.Common\obj\Debug\netcoreapp2.2\NpvCalculator.Common.dll
 C:\Users\jeinz\Desktop\NetPresentValueCalculator\NpvCalculator.Common\obj\Debug\netcoreapp2.2\NpvCalculator.Common.pdb
+C:\Users\richardl\Desktop\Practice Project\NpvCalculator\NpvCalculator.Common\bin\Debug\netcoreapp2.2\NpvCalculator.Common.deps.json
+C:\Users\richardl\Desktop\Practice Project\NpvCalculator\NpvCalculator.Common\bin\Debug\netcoreapp2.2\NpvCalculator.Common.dll
+C:\Users\richardl\Desktop\Practice Project\NpvCalculator\NpvCalculator.Common\bin\Debug\netcoreapp2.2\NpvCalculator.Common.pdb
+C:\Users\richardl\Desktop\Practice Project\NpvCalculator\NpvCalculator.Common\obj\Debug\netcoreapp2.2\NpvCalculator.Common.csprojAssemblyReference.cache
+C:\Users\richardl\Desktop\Practice Project\NpvCalculator\NpvCalculator.Common\obj\Debug\netcoreapp2.2\NpvCalculator.Common.AssemblyInfoInputs.cache
+C:\Users\richardl\Desktop\Practice Project\NpvCalculator\NpvCalculator.Common\obj\Debug\netcoreapp2.2\NpvCalculator.Common.AssemblyInfo.cs
+C:\Users\richardl\Desktop\Practice Project\NpvCalculator\NpvCalculator.Common\obj\Debug\netcoreapp2.2\NpvCalculator.Common.dll
+C:\Users\richardl\Desktop\Practice Project\NpvCalculator\NpvCalculator.Common\obj\Debug\netcoreapp2.2\NpvCalculator.Common.pdb

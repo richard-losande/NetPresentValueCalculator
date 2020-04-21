@@ -9,7 +9,7 @@ export default class App extends Component {
     return (
       <BrowserRouter>    
       <Switch>
-              <Route path='/' exact component={Cashflow} />              
+                <Route path="/" exact component={Cashflow} />              
       </Switch>
     </BrowserRouter>
     );
